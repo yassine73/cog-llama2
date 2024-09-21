@@ -1,0 +1,9 @@
+build:
+  python_version: "3.11"
+  gpu: true
+  system_packages:
+    - curl
+  run:
+    - curl -o /usr/local/bin/ollama -L https://github.com/ollama/ollama/releases/download/v0.1.48/ollama-linux-amd64  && chmod +x /usr/local/bin/ollama
+
+predict: "predict.py:Predictor"
